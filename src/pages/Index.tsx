@@ -97,9 +97,9 @@ export default function Index() {
             ))}
           </nav>
           <div className="flex items-center gap-3">
-            <a href="tel:+79870250000" className="hidden md:flex items-center gap-1 text-white text-sm font-medium">
+            <a href="tel:+79870258898" className="hidden md:flex items-center gap-1 text-white text-sm font-medium">
               <Icon name="Phone" size={14} className="text-[hsl(30,90%,55%)]" />
-              +7 (987) 025-XX-XX
+              +7 (987) 025-88-98
             </a>
             <button
               onClick={() => setBookingOpen(true)}
@@ -182,7 +182,7 @@ export default function Index() {
                 Записаться на установку
               </button>
               <a
-                href="tel:+79870250000"
+                href="tel:+79870258898"
                 className="flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded text-base hover:bg-white hover:text-[hsl(215,65%,15%)] transition-all duration-200"
               >
                 <Icon name="Phone" size={18} />
@@ -412,7 +412,7 @@ export default function Index() {
             <div className="space-y-6">
               {[
                 { icon: "MapPin", label: "Адрес", value: "Респ. Башкортостан, Нефтекамск, Индустриальная ул., 9Д/1" },
-                { icon: "Phone", label: "Телефон", value: "+7 (987) 025-XX-XX" },
+                { icon: "Phone", label: "Телефон", value: "+7 (987) 025-88-98" },
                 { icon: "MessageCircle", label: "Мессенджеры", value: "WhatsApp · Telegram" },
                 { icon: "Clock", label: "Режим работы", value: "Уточняйте по телефону" },
               ].map((c) => (
@@ -426,6 +426,26 @@ export default function Index() {
                   </div>
                 </div>
               ))}
+              <div className="grid grid-cols-2 gap-3">
+                <a
+                  href="https://wa.me/79870258898"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold py-3 rounded-xl hover:bg-[#1ebe5d] transition-colors text-sm"
+                >
+                  <Icon name="MessageCircle" size={18} />
+                  WhatsApp
+                </a>
+                <a
+                  href="https://t.me/gaztimensk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-[#229ED9] text-white font-semibold py-3 rounded-xl hover:bg-[#1a8ec5] transition-colors text-sm"
+                >
+                  <Icon name="Send" size={18} />
+                  Telegram
+                </a>
+              </div>
               <button
                 onClick={() => setBookingOpen(true)}
                 className="w-full bg-[hsl(30,90%,50%)] text-white font-bold py-4 rounded-xl hover:bg-[hsl(30,90%,42%)] transition-colors text-base flex items-center justify-center gap-2"
@@ -456,8 +476,17 @@ export default function Index() {
               <span className="text-white font-bold text-xl tracking-wider" style={{ fontFamily: "'Oswald', sans-serif" }}>GAZTIMENSK</span>
             </div>
             <p className="text-[hsl(215,20%,50%)] text-sm text-center">© GazTimeNSK. Установка ГБО в Нефтекамске.</p>
-            <div className="flex gap-4">
-              <a href="tel:+79870250000" className="text-[hsl(215,20%,60%)] hover:text-[hsl(30,90%,55%)] transition-colors text-sm">+7 (987) 025-XX-XX</a>
+            <div className="flex items-center gap-4">
+              <a href="tel:+79870258898" className="text-[hsl(215,20%,60%)] hover:text-[hsl(30,90%,55%)] transition-colors text-sm">+7 (987) 025-88-98</a>
+              <a href="https://wa.me/79870258898" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-[#25D366] rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                <Icon name="MessageCircle" size={16} className="text-white" />
+              </a>
+              <a href="https://t.me/gaztimensk" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-[#229ED9] rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                <Icon name="Send" size={16} className="text-white" />
+              </a>
+              <a href="https://www.youtube.com/@ilnarkhaidarov4076" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-[#FF0000] rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                <Icon name="Youtube" size={16} className="text-white" />
+              </a>
             </div>
           </div>
         </div>
