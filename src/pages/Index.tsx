@@ -5,34 +5,32 @@ const HERO_IMG = "https://cdn.poehali.dev/projects/4cb370e0-278a-471c-900d-122f5
 const WORK_IMG = "https://cdn.poehali.dev/projects/4cb370e0-278a-471c-900d-122f5e88d26d/files/57da40df-d31e-4ada-a454-5b731b8e010d.jpg";
 const EXTERIOR_IMG = "https://cdn.poehali.dev/projects/4cb370e0-278a-471c-900d-122f5e88d26d/files/759039c0-e030-49ba-9d1f-d08c25e8b535.jpg";
 
-const MASTERS = ["Александр Петров", "Дмитрий Соколов", "Игорь Карпов"];
+const MASTERS = ["Ильнар (мастер-установщик BRC)"];
 const TIME_SLOTS = ["09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"];
 
 const SERVICES = [
-  { icon: "Flame", title: "ГБО 2-го поколения", desc: "Установка на карбюраторные и моновпрысковые двигатели. Надёжно и доступно.", price: "от 18 000 ₽" },
-  { icon: "Zap", title: "ГБО 4-го поколения", desc: "Последовательный впрыск газа для современных инжекторных двигателей.", price: "от 35 000 ₽" },
-  { icon: "Settings", title: "ГБО 5-го поколения", desc: "Прямой впрыск газа. Максимальная эффективность и совместимость.", price: "от 55 000 ₽" },
-  { icon: "Wrench", title: "Техническое обслуживание", desc: "Регулировка, замена фильтров, диагностика и настройка системы.", price: "от 3 500 ₽" },
-  { icon: "FileText", title: "Документы ГИБДД", desc: "Полное оформление документов для постановки ГБО на учёт в ГИБДД.", price: "от 5 000 ₽" },
-  { icon: "Shield", title: "Демонтаж ГБО", desc: "Профессиональный демонтаж газового оборудования любой сложности.", price: "от 6 000 ₽" },
+  { icon: "Flame", title: "Установка ГБО", desc: "Оборудование Италия и Польша. Устанавливаем ГБО на автомобили любых марок и классов.", price: "46 000 ₽" },
+  { icon: "Zap", title: "ГБО на прямой и комбинированный впрыск", desc: "Переводим автомобили с прямым и комбинированным впрыском на газ (TSI, TFSI, GDI). Замещение бензин/газ от 25/75 до 5/95.", price: "95 000 ₽" },
+  { icon: "FileText", title: "Регистрация ГБО в ГИБДД", desc: "Быстро и без очередей поможем оформить газобаллонное оборудование!", price: "8 000 ₽" },
+  { icon: "Wrench", title: "Демонтаж/монтаж для ГИБДД", desc: "Демонтируем видимые части ГБО при постановке автотранспорта на учёт в ГИБДД.", price: "3 500 ₽" },
+  { icon: "Shield", title: "Поверка ГБО и баллонов", desc: "Проводим поверку газобаллонного оборудования и баллонов. Предоставляем справки 2Б для прохождения техосмотра.", price: "500 ₽" },
+  { icon: "Package", title: "Заказ запчастей для ГБО", desc: "Заказываем и доставляем запчасти и расходники для газобаллонного оборудования.", price: "от 300 ₽" },
 ];
 
 const PRICES = [
-  { name: "ГБО 2 поколения (карбюратор)", price: "18 000 – 22 000 ₽" },
-  { name: "ГБО 2 поколения (моновпрыск)", price: "20 000 – 25 000 ₽" },
-  { name: "ГБО 4 поколения (4 цилиндра)", price: "35 000 – 45 000 ₽" },
-  { name: "ГБО 4 поколения (6 цилиндров)", price: "45 000 – 58 000 ₽" },
-  { name: "ГБО 5 поколения (прямой впрыск)", price: "55 000 – 75 000 ₽" },
-  { name: "Техническое обслуживание", price: "3 500 – 8 000 ₽" },
-  { name: "Оформление документов ГИБДД", price: "5 000 – 8 000 ₽" },
-  { name: "Демонтаж ГБО", price: "6 000 – 10 000 ₽" },
+  { name: "Установка ГБО (оборудование Италия/Польша)", price: "46 000 ₽" },
+  { name: "ГБО на прямой и комбинированный впрыск (TSI, TFSI, GDI)", price: "95 000 ₽" },
+  { name: "Регистрация ГБО в ГИБДД", price: "8 000 ₽" },
+  { name: "Демонтаж/монтаж при постановке на учёт", price: "3 500 ₽" },
+  { name: "Поверка ГБО и баллонов + справка 2Б для ТО", price: "500 ₽" },
+  { name: "Заказ запчастей для ГБО", price: "от 300 ₽" },
 ];
 
 const REVIEWS = [
-  { name: "Алексей М.", rating: 5, text: "Установили ГБО 4 поколения на мою Toyota Camry. Работа выполнена аккуратно, все объяснили, показали что к чему. Теперь экономлю на топливе в 2 раза!", date: "15 мая 2025" },
-  { name: "Сергей К.", rating: 5, text: "Обратился за оформлением документов в ГИБДД. Сделали всё быстро и без лишней беготни. Очень доволен профессионализмом ребят.", date: "3 апреля 2025" },
-  { name: "Наталья В.", rating: 5, text: "Делали ТО газового оборудования. Нашли небольшую утечку, устранили сразу. Честные цены, грамотные мастера. Рекомендую!", date: "20 марта 2025" },
-  { name: "Андрей Ф.", rating: 5, text: "Ставил ГБО 2 года назад, приехал на регламентное ТО. Всё отлично, никаких нареканий. Сервис работает чётко.", date: "10 февраля 2025" },
+  { name: "Динар Абубакиров", rating: 5, text: "Все на высшем уровне", date: "7 апреля" },
+  { name: "А.", rating: 5, text: "Быстро, качественно 👍 установили! Отлично всё работает. Советую всем кто хочет установить ГБО", date: "19 декабря" },
+  { name: "Марат Юсупов", rating: 5, text: "Вы ещё думаете или сомневаетесь установить ГБО? Вы любите свою машину? Здесь Вам всё расскажут, покажут, объяснят — в лучшем виде, без сомнения. И будет вам счастье!", date: "27 января" },
+  { name: "430079 Гарифуллин", rating: 5, text: "Переставил BRC с Kia Optima 2.0л на Camry 55 2.5л. Вчера проехал на газе 540 км. Ильнар — единственный установщик в городе, который много лет проработал у официального дилера BRC и сам обучал установщиков по всей России и СНГ.", date: "3 декабря" },
 ];
 
 const PORTFOLIO = [
@@ -84,7 +82,7 @@ export default function Index() {
               <Icon name="Flame" size={18} className="text-white" />
             </div>
             <span className="text-white font-bold text-xl tracking-wider" style={{ fontFamily: "'Oswald', sans-serif" }}>
-              ГАЗТИМСК
+              GAZTIMENSK
             </span>
           </a>
           <nav className="hidden lg:flex items-center gap-6">
@@ -99,9 +97,9 @@ export default function Index() {
             ))}
           </nav>
           <div className="flex items-center gap-3">
-            <a href="tel:+73822000000" className="hidden md:flex items-center gap-1 text-white text-sm font-medium">
+            <a href="tel:+79870250000" className="hidden md:flex items-center gap-1 text-white text-sm font-medium">
               <Icon name="Phone" size={14} className="text-[hsl(30,90%,55%)]" />
-              +7 (382) 200-00-00
+              +7 (987) 025-XX-XX
             </a>
             <button
               onClick={() => setBookingOpen(true)}
@@ -151,16 +149,16 @@ export default function Index() {
           <div className="max-w-2xl animate-fade-in">
             <div className="inline-flex items-center gap-2 bg-[hsl(30,90%,50%)] text-white text-xs font-bold px-3 py-1.5 rounded mb-6 tracking-wider uppercase">
               <Icon name="MapPin" size={12} />
-              г. Тимск · Работаем с 2008 года
+              Нефтекамск · Рейтинг 5.0 на Яндекс Картах
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-none mb-6 uppercase" style={{ fontFamily: "'Oswald', sans-serif" }}>
               Установка<br />
               <span className="text-[hsl(30,90%,55%)]">ГБО</span><br />
-              в Тимске
+              в Нефтекамске
             </h1>
             <p className="text-[hsl(215,20%,78%)] text-lg mb-4 leading-relaxed">
-              Профессиональный автотехцентр по установке газобаллонного оборудования.
-              Более 2 500 успешных установок за 16 лет работы.
+              Компания «GazTimeNSK» — профессиональный монтаж газобаллонных установок 
+              высокого качества на автомобили любых марок и классов. Оборудование Италия и Польша.
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
               <div className="flex items-center gap-2 text-[hsl(215,20%,78%)] text-sm">
@@ -184,7 +182,7 @@ export default function Index() {
                 Записаться на установку
               </button>
               <a
-                href="tel:+73822000000"
+                href="tel:+79870250000"
                 className="flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded text-base hover:bg-white hover:text-[hsl(215,65%,15%)] transition-all duration-200"
               >
                 <Icon name="Phone" size={18} />
@@ -202,7 +200,7 @@ export default function Index() {
               { value: "1 день", label: "Срок работ" },
             ].map((s) => (
               <div key={s.label} className="py-5 px-6 text-center">
-                <div className="text-2xl font-black text-[hsl(30,90%,55%)]" style={{ fontFamily: "'Oswald', sans-serif" }}>{s.value}</div>
+                <div className="text-2xl font-black text-[hsl(30,90%,60%)]" style={{ fontFamily: "'Oswald', sans-serif" }}>{s.value}</div>
                 <div className="text-[hsl(215,20%,65%)] text-xs mt-0.5 uppercase tracking-wider">{s.label}</div>
               </div>
             ))}
@@ -307,19 +305,19 @@ export default function Index() {
             <div>
               <div className="inline-block bg-[hsl(30,90%,50%)] text-white text-xs font-bold px-3 py-1 rounded mb-4 tracking-widest uppercase">О компании</div>
               <h2 className="text-4xl md:text-5xl font-black text-white uppercase mb-6" style={{ fontFamily: "'Oswald', sans-serif" }}>
-                16 лет опыта<br />в установке ГБО
+                Надёжная установка<br />ГБО в Нефтекамске
               </h2>
               <p className="text-[hsl(215,20%,72%)] leading-relaxed mb-6">
-                Автотехцентр «ГазТимск» работает с 2008 года. За это время мы установили газобаллонное оборудование
-                более чем на 2 500 автомобилей. Наши мастера регулярно проходят обучение и сертификацию
-                у ведущих производителей ГБО: BRC, Lovato, OMVL, Tomasetto.
+                Компания «GazTimeNSK» оказывает услуги в области монтажа газобаллонных установок высокого 
+                качества на автомобили любых марок и классов. Мы гарантируем, что каждый обратившийся к нам 
+                владелец получит надёжную и долговечную газовую установку.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
-                  { icon: "Award", text: "Официальные дилеры BRC и Lovato" },
-                  { icon: "Users", text: "Команда из 8 сертифицированных мастеров" },
-                  { icon: "CheckCircle", text: "Более 2 500 выполненных установок" },
-                  { icon: "Star", text: "Средняя оценка клиентов 4.9/5" },
+                  { icon: "Award", text: "Официальный дилер BRC — оборудование Италия и Польша" },
+                  { icon: "Users", text: "Мастер Ильнар обучал установщиков по всей России и СНГ" },
+                  { icon: "CheckCircle", text: "Рейтинг 5.0 — 44 отзыва на Яндекс Картах" },
+                  { icon: "Star", text: "Работаем с TSI, TFSI, GDI и любым типом впрыска" },
                 ].map((item) => (
                   <div key={item.text} className="flex items-start gap-3">
                     <Icon name={item.icon} size={18} className="text-[hsl(30,90%,55%)] mt-0.5 shrink-0" fallback="Check" />
@@ -413,10 +411,10 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-6">
               {[
-                { icon: "MapPin", label: "Адрес", value: "г. Тимск, ул. Промышленная, д. 14" },
-                { icon: "Phone", label: "Телефон", value: "+7 (382) 200-00-00" },
-                { icon: "Mail", label: "Email", value: "info@gaztimsk.ru" },
-                { icon: "Clock", label: "Режим работы", value: "Пн–Сб: 08:00 – 20:00 / Вс: 09:00 – 17:00" },
+                { icon: "MapPin", label: "Адрес", value: "Респ. Башкортостан, Нефтекамск, Индустриальная ул., 9Д/1" },
+                { icon: "Phone", label: "Телефон", value: "+7 (987) 025-XX-XX" },
+                { icon: "MessageCircle", label: "Мессенджеры", value: "WhatsApp · Telegram" },
+                { icon: "Clock", label: "Режим работы", value: "Уточняйте по телефону" },
               ].map((c) => (
                 <div key={c.label} className="flex items-start gap-4 p-4 rounded-xl border border-[hsl(215,20%,88%)] hover:border-[hsl(30,90%,50%)] transition-colors">
                   <div className="w-10 h-10 bg-[hsl(215,65%,22%)] rounded-lg flex items-center justify-center shrink-0">
@@ -439,7 +437,7 @@ export default function Index() {
             <div className="rounded-xl overflow-hidden border border-[hsl(215,20%,88%)] h-80 lg:h-auto min-h-64 bg-[hsl(215,20%,92%)] flex items-center justify-center">
               <div className="text-center p-8">
                 <Icon name="Map" size={48} className="text-[hsl(215,40%,60%)] mx-auto mb-3" />
-                <p className="text-[hsl(215,30%,35%)] font-medium">г. Тимск, ул. Промышленная, д. 14</p>
+                <p className="text-[hsl(215,30%,35%)] font-medium">Нефтекамск, Индустриальная ул., 9Д/1</p>
                 <p className="text-[hsl(215,20%,55%)] text-sm mt-1">Карта будет добавлена после настройки</p>
               </div>
             </div>
@@ -455,11 +453,11 @@ export default function Index() {
               <div className="w-8 h-8 bg-[hsl(30,90%,50%)] rounded flex items-center justify-center">
                 <Icon name="Flame" size={18} className="text-white" />
               </div>
-              <span className="text-white font-bold text-xl tracking-wider" style={{ fontFamily: "'Oswald', sans-serif" }}>ГАЗТИМСК</span>
+              <span className="text-white font-bold text-xl tracking-wider" style={{ fontFamily: "'Oswald', sans-serif" }}>GAZTIMENSK</span>
             </div>
-            <p className="text-[hsl(215,20%,50%)] text-sm text-center">© 2008–2026 ГазТимск. Установка ГБО в Тимске.</p>
+            <p className="text-[hsl(215,20%,50%)] text-sm text-center">© GazTimeNSK. Установка ГБО в Нефтекамске.</p>
             <div className="flex gap-4">
-              <a href="tel:+73822000000" className="text-[hsl(215,20%,60%)] hover:text-[hsl(30,90%,55%)] transition-colors text-sm">+7 (382) 200-00-00</a>
+              <a href="tel:+79870250000" className="text-[hsl(215,20%,60%)] hover:text-[hsl(30,90%,55%)] transition-colors text-sm">+7 (987) 025-XX-XX</a>
             </div>
           </div>
         </div>
